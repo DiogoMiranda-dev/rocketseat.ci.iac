@@ -137,8 +137,8 @@ resource "aws_iam_role" "tf-role" {
         Resource = "*"
         },
         {
-          Sid = "Statement2"
-          Action = "iam:*",
+          Sid      = "Statement2"
+          Action   = "iam:*",
           Effect   = "Allow"
           Resource = "*"
         },
