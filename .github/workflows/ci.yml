@@ -15,7 +15,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: us-east-2
-          role-to-assume: ''
+          role-to-assume: 'arn:aws:iam::970547348974:role/tf-role'
     
       - name: Setup terraform
         uses: 'hashicorp/setup-terraform@v3'
@@ -30,6 +30,6 @@ jobs:
       
       - name: Terraform plan
         run: terraform plan
-        
+
       - name: Terraform apply
         run: terraform apply -auto-approve
