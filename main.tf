@@ -11,11 +11,11 @@ terraform {
     key     = "state/terraform.tfstate"
     encrypt = true
 
-    profile = "diogomiranda-iac-sso"
+    profile = "diogomiranda-dev"
   }
 }
 provider "aws" {
-  profile = "diogomiranda-iac-sso"
+  profile = "diogomiranda-dev"
   region  = "us-east-2"
 }
 
