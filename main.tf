@@ -10,8 +10,6 @@ terraform {
     region  = "us-east-2"
     key     = "state/terraform.tfstate"
     encrypt = true
-
-    profile = "diogomiranda-dev"
   }
 }
 provider "aws" {
