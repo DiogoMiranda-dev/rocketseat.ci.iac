@@ -32,7 +32,7 @@ jobs:
           terraform_version: ${{ vars.TF_VERSION }}
 
       - name: Terraform init
-        run: terraform init
+        run: terraform init -reconfigure -backend-config "profile=diogomiranda-iac-sso"
 
       - name: Terraform format
         run: terraform fmt -check

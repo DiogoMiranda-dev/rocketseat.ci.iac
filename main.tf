@@ -1,3 +1,8 @@
+provider "aws" {
+  profile = "diogomiranda-iac-sso"
+  region  = "us-east-2"
+}
+
 terraform {
   required_providers {
     aws = {
@@ -10,11 +15,8 @@ terraform {
     region  = "us-east-2"
     key     = "state/terraform.tfstate"
     encrypt = true
+    profile = "diogomiranda-iac-sso"
   }
-}
-provider "aws" {
-  profile = "diogomiranda-dev"
-  region  = "us-east-2"
 }
 
 resource "aws_s3_bucket" "terraform-state" {
